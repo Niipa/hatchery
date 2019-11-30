@@ -12,7 +12,7 @@ public class Hatchery {
     this.spawningPool = spawningPool;
   }
 
-  public <T> T spawn(Class<T> clazz) {
+  public <T extends Evolvable> T spawn(Class<T> clazz) {
     return spawningPool.spawn(clazz);
   }
 }
